@@ -1,7 +1,8 @@
-import { error } from "console";
 import { useContext, useEffect } from "react"
 import { AuthContext } from "../contexts/AuthContext"
-import { api } from "../services/api";
+import { setupAPIClient } from "../services/api";
+import { api } from "../services/apiClient";
+import { withSSRAuth } from "../utils/withSSRAuth";
 
 export default function dashboard() {
   const { user } = useContext(AuthContext);
@@ -9,10 +10,20 @@ export default function dashboard() {
   useEffect(() => {
     api.get('/me')
       .then((response) => console.log(response))
-      .catch(() => console.log(error))
+      .catch(err => console.log(err))
   },[])
 
   return (
     <h1>Bem-vindo: {user?.email}</h1>
   )
 }
+
+export const getServerSideProps = withSSRAuth( async (ctx) => {
+  const apiClient = setupAPIClient(ctx);
+  const response = await apiClient.get('/me'); 
+
+  return {
+    props: {}
+  }
+})
+
