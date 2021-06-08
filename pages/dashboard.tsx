@@ -1,11 +1,16 @@
 import { useContext, useEffect } from "react"
 import { AuthContext } from "../contexts/AuthContext"
+import { useCan } from "../hooks/useCan";
 import { setupAPIClient } from "../services/api";
 import { api } from "../services/apiClient";
 import { withSSRAuth } from "../utils/withSSRAuth";
 
 export default function dashboard() {
   const { user } = useContext(AuthContext);
+
+  const userCanSeeMetrics =  useCan({
+    permissions: ['metrics.list']
+  });
 
   useEffect(() => {
     api.get('/me')
@@ -14,13 +19,19 @@ export default function dashboard() {
   },[])
 
   return (
-    <h1>Bem-vindo: {user?.email}</h1>
+    <>
+      <h1>Bem-vindo: {user?.email}</h1>
+
+      { userCanSeeMetrics && <div>Metrícas</div> }
+    </>
   )
 }
 
 export const getServerSideProps = withSSRAuth( async (ctx) => {
   const apiClient = setupAPIClient(ctx);
   const response = await apiClient.get('/me'); 
+
+  console.log(response.data);
 
   return {
     props: {}
