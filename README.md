@@ -1,8 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Hello World
+Esse projeto tem o intuito de implementar um sistema de login e logout de um dashboard ou sistema semelhante. Para isso, foi desenvolvido em: 
+✔ NextJS 
+✔ Chackra UI
+✔ Sass
+✔ Nookies
+✔ Jwt-decode
+✔ Axios
+
+Vale lembrar que será necessário ter um backend para gerar os Tokens de autentificação e as autorizações de usuário. Existe esse backend disponível com o nome de [Auth-backend](https://github.com/Rodrigo-A-Rodrigues/auth-backend).
 
 ## Getting Started
 
-First, run the development server:
+Pirmeiro, rode esses comandos no seu terminal para instalar as dependências do projeto:
+
+```bash
+npm install
+#or
+yarn 
+```
+Para rodar sua aplicação utilize o camando:
 
 ```bash
 npm run dev
@@ -10,13 +26,11 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Será aberto em [http://localhost:3000](http://localhost:3000) o resultado desse projeto.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Logo, será possível visualizar a seguinte página: 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+![Screenshots](./public/screenshot/LoginForm.jpg)
 
 ## Learn More
 
