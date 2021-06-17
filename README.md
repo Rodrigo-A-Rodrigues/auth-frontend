@@ -1,17 +1,18 @@
 ## Hello World
 Esse projeto tem o intuito de implementar um sistema de login e logout de um dashboard ou sistema semelhante. Para isso, foi desenvolvido em: 
-✔ NextJS 
-✔ Chackra UI
-✔ Sass
-✔ Nookies
-✔ Jwt-decode
-✔ Axios
+</br>
+✔ NextJS</br> 
+✔ Chackra UI</br>
+✔ Sass</br>
+✔ Nookies</br>
+✔ Jwt-decode</br>
+✔ Axios</br>
 
 Vale lembrar que será necessário ter um backend para gerar os Tokens de autentificação e as autorizações de usuário. Existe esse backend disponível com o nome de [Auth-backend](https://github.com/Rodrigo-A-Rodrigues/auth-backend).
 
 ## Getting Started
 
-Pirmeiro, rode esses comandos no seu terminal para instalar as dependências do projeto:
+Primeiro, rode esses comandos no seu terminal para instalar as dependências do projeto:
 
 ```bash
 npm install
