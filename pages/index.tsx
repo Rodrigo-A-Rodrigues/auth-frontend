@@ -22,8 +22,8 @@ export default function Home() {
   }
 
   return (
-    <Flex w="100vw" h="100vh" justify="center" align="center" >
-      <Box w="50vw" px="10" py="20" h="100vh" position="relative">
+    <Flex w="100vw" h={["120vh","100vh"]} justify="center" align="center" flexDir={["column", "row"]} >
+      <Box w="50vw" px={["0","10"]} py="20" h={["120vh","100vh"]} position="relative">
         <Box mb="10">
           <Heading as="h3" fontSize="2xl">Welcome to Dashboard 👊</Heading>
           <Text maxW="500px" my="15">
@@ -58,7 +58,7 @@ export default function Home() {
               _hover={{
                 background: "purple.500"
               }} 
-              w="500px">Login</Button>
+              w={["200px", "500px"]}>Login</Button>
           </form>
         </Box>
         <Box position="absolute" bottom="5">
@@ -66,7 +66,7 @@ export default function Home() {
         </Box>
       </Box>
       <Box>
-        <Img src="/back_01.svg" w="500px" />
+        <Img src="/back_01.svg" w={["500px","800px"]} />
       </Box>
     </Flex>
   )

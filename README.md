@@ -8,7 +8,7 @@ Esse projeto tem o intuito de implementar um sistema de login e logout de um das
 ✔ Jwt-decode</br>
 ✔ Axios</br>
 
-Vale lembrar que será necessário ter um backend para gerar os Tokens de autentificação e as autorizações de usuário. Existe esse backend disponível com o nome de [Auth-backend](https://github.com/Rodrigo-A-Rodrigues/auth-backend).
+Vale lembrar que será necessário ter um backend para gerar os Tokens de autenticação e as autorizações de usuário. Existe esse backend disponível com o nome de [Auth-backend](https://github.com/Rodrigo-A-Rodrigues/auth-backend).
 
 ## Getting Started
 
